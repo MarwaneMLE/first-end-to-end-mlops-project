@@ -22,13 +22,13 @@ list_of_files = [
     "src/exception/exception.py",
     "tests/unit/__init__.py",
     "tests/integration/__init__.py",
-    "init_setup.py",
+    "init_setup.sh",
     "requirements.txt",
     "requirements_dev.txt",
     "setup.cfg",
     "pyproject.toml",
     "tox.ini",
-    "exprement/exprements.ipynb"
+    "experiment/experiments.ipynb"
 ]
 
 for filepath in list_of_files:
