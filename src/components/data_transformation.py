@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np 
-from logger.logging import logging
+from logger.logg import logging
 from exceptions.exception import CustomException
 
 import os
@@ -13,7 +13,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 
-from src.utils.utils import save_object 
+from utils.util import save_object 
 
 
 @dataclass
@@ -40,6 +40,8 @@ class DataTransfomation:
             clarity_categories =  ["I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "IF"]
 
             logging.info("Pipeline initiated")
+            
+
             ## Numerical pipeline
             num_pipeline = Pipeline(
                 steps = [
@@ -47,14 +49,16 @@ class DataTransfomation:
                     ("scaler", StandardScaler())
                 ]  
             )
+            
             ## Categorical pipeline
             cat_pipeline = Pipeline(
                 steps = [
-                    ("imputer", SimpleImputer(strategy="most_frequent")),
+                    ("imputer", SimpleImputer(strategy="most_frequent", fill_value=None)),
                     ("ordinalencoder", OrdinalEncoder(categories=[cut_categories, color_categories, clarity_categories])),
                     ("scaler", StandardScaler())
                 ]
             )
+ 
 
             preprocessor = ColumnTransformer([
                 ("num_pipeline", num_pipeline, numerical_cols),
@@ -92,7 +96,7 @@ class DataTransfomation:
             input_feature_train_arr = preprocessing_object.fit_transform(input_feature_train_df)
             input_feature_test_arr = preprocessing_object.transform(input_feature_test_df)
 
-            logging.info("Preprocesing in applyed on train and test data")
+            #logging.info("Preprocesing in applyed on train and test data")
 
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]

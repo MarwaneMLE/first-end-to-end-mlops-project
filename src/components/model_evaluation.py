@@ -11,7 +11,11 @@ import pickle
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from pathlib import Path
-"""from logger import logg
+
+from src.logger.logg import logging
+from src.exceptions.exception import CustomException
+
+#from logger import logg
 
 @dataclass
 class ModelEvaluationConfig:
@@ -27,4 +31,4 @@ class ModelEvaluation:
             pass
         except Exception as e:
             logging.info()
-            raise CustomException(e, sys)"""
+            raise CustomException(e, sys)

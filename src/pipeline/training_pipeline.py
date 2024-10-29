@@ -4,9 +4,9 @@ import sys
 #from exceptions.exception import customexception
 #import pandas as pd
 
-from src.components.data_ingestion import DataIngestion
-from src.components.data_transformation import DataTransfomation
-from src.components.model_training import ModelTrainer 
+from components.data_ingestion import DataIngestion
+from components.data_transformation import DataTransfomation
+from components.model_training import ModelTrainer 
 
 object = DataIngestion()
 

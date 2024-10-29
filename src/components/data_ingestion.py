@@ -5,7 +5,7 @@ import numpy as np
 from dataclasses import dataclass
 from pathlib import Path
 
-from logger.logging import logging
+from logger.logg import logging
 from exceptions.exception import CustomException 
 from sklearn.model_selection import train_test_split
 
@@ -27,9 +27,10 @@ class DataIngestion:
         try:
             logging.info("data ingestion started")
             #data = pd.read_csv("/home/marwane/mlops-projects/first-end-to-end-mlops-project/data/playground-series-s3e8/train.csv")
-            data = pd.read_csv("https://raw.githubusercontent.com/sunnysavita10/fsdsmendtoend/main/notebooks/data/gemstone.csv")
-            logging.info("Reading my dataframe")
+            data = pd.read_csv("https://raw.githubusercontent.com/abhijitpaul0212/GemstonePricePrediction/refs/heads/master/notebooks/data/gemstone.csv")
+            logging.info("Reading my DataFrame")
 
+             
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path))),
             data.to_csv(self.ingestion_config.raw_data_path, index=False),
             logging.info("I have saved the raw dataset in artifact folder")
@@ -48,7 +49,7 @@ class DataIngestion:
                 self.ingestion_config.test_data_path
             )
         except Exception as e:
-            logging.info("Exception Occured")
+            logging.info("Exception occured")
             raise CustomException(e, sys)
 
 """
