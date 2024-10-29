@@ -1,9 +1,3 @@
-import sys
+from src.logger.logg import logging
 
-
-try:
-    a = 1/0
-except Exception as e:
-    print(e)
-    
-print(sys.exc_info())
+logging.info("Test 1111")

@@ -4,8 +4,8 @@ import pickle
 import pandas as pd
 import numpy as np 
 
-from src.logger.logging import logging
-from src.exception.exception import CustomException
+from logger.logg import logging
+from exceptions.exception import CustomException
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
 
@@ -30,7 +30,7 @@ def evaluate_model(X_train, y_train, X_test, y_test, models):
 
             model.fit(X_train, y_train)
         
-        # Predict test data
+            # Predict test data
             y_test_pred = model.predict(X_test)
 
 
