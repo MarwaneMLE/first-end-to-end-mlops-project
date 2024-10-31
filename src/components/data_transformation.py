@@ -13,7 +13,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 
-from utils.util import save_object 
+from utils.util import save_object
 
 
 @dataclass
@@ -32,7 +32,7 @@ class DataTransfomation:
 
             # Separete categorical and numerical columns
             categorical_cols = ["cut", "color", "clarity"]
-            numerical_cols = ["carat", "depth", "clarity", "table", "x", "y", "z"]
+            numerical_cols = ["carat", "depth", "table", "x", "y", "z"]
 
             # Custum ranking for each ordinal feature
             cut_categories = ["Fair", "Good", "Very Good", "Premium", "Ideal"]
@@ -53,7 +53,7 @@ class DataTransfomation:
             ## Categorical pipeline
             cat_pipeline = Pipeline(
                 steps = [
-                    ("imputer", SimpleImputer(strategy="most_frequent", fill_value=None)),
+                    ("imputer", SimpleImputer(strategy="most_frequent")),
                     ("ordinalencoder", OrdinalEncoder(categories=[cut_categories, color_categories, clarity_categories])),
                     ("scaler", StandardScaler())
                 ]
