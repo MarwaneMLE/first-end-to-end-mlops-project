@@ -25,7 +25,6 @@ class DataTransfomation:
     def __init__(self):
         self.data_transformation_config = DataTransfomationConfig()
 
-
     def get_data_transformation(self):
         try:
             logging.info("Data transformation start")
@@ -41,7 +40,6 @@ class DataTransfomation:
 
             logging.info("Pipeline initiated")
             
-
             ## Numerical pipeline
             num_pipeline = Pipeline(
                 steps = [
@@ -54,12 +52,11 @@ class DataTransfomation:
             cat_pipeline = Pipeline(
                 steps = [
                     ("imputer", SimpleImputer(strategy="most_frequent")),
-                    ("ordinalencoder", OrdinalEncoder(categories=[cut_categories, color_categories, clarity_categories])),
+                    ("ordinalencoder", OrdinalEncoder(categories=[cut_categories, color_categories, clarity_categories],handle_unknown='use_encoded_value', unknown_value=-1)),
                     ("scaler", StandardScaler())
                 ]
             )
  
-
             preprocessor = ColumnTransformer([
                 ("num_pipeline", num_pipeline, numerical_cols),
                 ("cat_pipeline", cat_pipeline, categorical_cols)
@@ -70,8 +67,7 @@ class DataTransfomation:
         except Exception as e:
             logging.info("Exception occured in the initiate_datatransformation")
             raise CustomException(e, sys)
-        
-    
+           
     def initialize_data_transformation(self, train_path, test_path):
         try:
             # This data come from data ingestion from artifact dir

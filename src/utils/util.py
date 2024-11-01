@@ -71,10 +71,10 @@ def evaluate_model(X_train, y_train, X_test, y_test, models: dict) -> dict:
 def load_object(file_path):
     try:
         with open(file_path, 'rb') as file_obj:
-            logging.info("Object read and loaded from {}".format(file_path))
+            #logging.info("Object read and loaded from {}".format(file_path))
             return pickle.load(file_obj)
         
     except Exception as e:
-        logging.info('Exception occured while loading object')
+        logging.info('Exception Occured in load_object function utils')
         raise CustomException(e, sys)
 
