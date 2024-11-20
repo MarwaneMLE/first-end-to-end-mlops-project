@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marwane/mlops-projects/first-end-to-end-mlops-project/mlruns/0/84df0337e3e146e69145c5208740c14e/artifacts
+end_time: 1732142058112
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 84df0337e3e146e69145c5208740c14e
+run_name: resilient-lynx-54
+run_uuid: 84df0337e3e146e69145c5208740c14e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732142048963
+status: 3
+tags: []
+user_id: marwane

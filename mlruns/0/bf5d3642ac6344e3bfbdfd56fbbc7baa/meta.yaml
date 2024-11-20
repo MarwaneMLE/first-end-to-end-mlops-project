@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marwane/mlops-projects/first-end-to-end-mlops-project/mlruns/0/bf5d3642ac6344e3bfbdfd56fbbc7baa/artifacts
+end_time: 1732141798049
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bf5d3642ac6344e3bfbdfd56fbbc7baa
+run_name: caring-seal-585
+run_uuid: bf5d3642ac6344e3bfbdfd56fbbc7baa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732141797987
+status: 3
+tags: []
+user_id: marwane

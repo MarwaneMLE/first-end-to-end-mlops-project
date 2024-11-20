@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marwane/mlops-projects/first-end-to-end-mlops-project/experiment/mlruns/0/85d7fdca16be49f381f6ba733d9d5fa9/artifacts
+end_time: 1730592124276
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 85d7fdca16be49f381f6ba733d9d5fa9
+run_name: unruly-ray-668
+run_uuid: 85d7fdca16be49f381f6ba733d9d5fa9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730592124210
+status: 3
+tags: []
+user_id: marwane

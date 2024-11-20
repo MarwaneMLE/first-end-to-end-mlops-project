@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marwane/mlops-projects/first-end-to-end-mlops-project/mlruns/0/e2172a24d20e4928b77df51fb0d8ad51/artifacts
+end_time: 1732142587476
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e2172a24d20e4928b77df51fb0d8ad51
+run_name: honorable-ape-541
+run_uuid: e2172a24d20e4928b77df51fb0d8ad51
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732142587421
+status: 3
+tags: []
+user_id: marwane

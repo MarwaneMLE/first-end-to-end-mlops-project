@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marwane/mlops-projects/first-end-to-end-mlops-project/explanation/mlruns/0/e3b322798b6444c7b67f0b2149d0efd7/artifacts
+end_time: 1730675769940
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e3b322798b6444c7b67f0b2149d0efd7
+run_name: welcoming-goose-135
+run_uuid: e3b322798b6444c7b67f0b2149d0efd7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730675769927
+status: 3
+tags: []
+user_id: marwane

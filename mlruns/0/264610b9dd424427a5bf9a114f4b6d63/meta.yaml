@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marwane/mlops-projects/first-end-to-end-mlops-project/mlruns/0/264610b9dd424427a5bf9a114f4b6d63/artifacts
+end_time: 1730764874910
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 264610b9dd424427a5bf9a114f4b6d63
+run_name: suave-lynx-374
+run_uuid: 264610b9dd424427a5bf9a114f4b6d63
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730764874873
+status: 3
+tags: []
+user_id: marwane
